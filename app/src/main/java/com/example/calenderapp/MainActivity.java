@@ -74,9 +74,9 @@ public class MainActivity extends AppCompatActivity {
             String passwordValue = password.getText().toString();
             if (usernameValue.equals("Admin1") && passwordValue.equals("password1")) {
                 //everything checked we open new activity
-                Toast t = Toast.makeText(this, "Welcome Back!", Toast.LENGTH_SHORT);
-                t.show();
-                switchToCalenderView();
+                Intent i = new Intent(MainActivity.this, MainCalenderView.class);
+                startActivity(i);
+                finish();
 
             } else {
                 Toast t = Toast.makeText(this, "Wrong username or password!", Toast.LENGTH_SHORT);
@@ -84,11 +84,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
-    }
-    private void switchToCalenderView() {
-        Intent i = new Intent(MainActivity.this, MainCalenderView.class);
-        startActivity(i);
-        finish();
     }
 
 }
