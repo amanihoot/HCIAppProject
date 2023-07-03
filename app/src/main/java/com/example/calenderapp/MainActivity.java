@@ -1,8 +1,8 @@
 package com.example.calenderapp;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.constraintlayout.widget.ConstraintLayout;
-import android.graphics.drawable.AnimationDrawable;
+//import androidx.constraintlayout.widget.ConstraintLayout;
+//import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
 
 public class MainActivity extends AppCompatActivity {
