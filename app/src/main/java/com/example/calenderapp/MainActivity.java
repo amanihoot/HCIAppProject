@@ -27,18 +27,17 @@ public class MainActivity extends AppCompatActivity {
         login = findViewById(R.id.LoginButton);
 
 
-
-
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 checkDataEntered();
+
             }
         });
 
     }
     //public boolean isEmpty() {
-     //   return;
+    //   return;
     //}
 
     void checkDataEntered() {
@@ -46,14 +45,13 @@ public class MainActivity extends AppCompatActivity {
         if (username.getText().toString().isEmpty() || password.getText().toString().isEmpty()) {
             Toast t = Toast.makeText(this, "Please enter your credentials", Toast.LENGTH_SHORT);
             t.show();
-        }
-        else {
+        } else {
             checkUsername();
         }
 
-       // switchToResultScreen(grade);
     }
-    void checkUsername() {
+
+    private void checkUsername() {
         boolean isValid = true;
         if (username.getText().toString().isEmpty()) {
             username.setError("You must enter username to login!");
@@ -70,21 +68,27 @@ public class MainActivity extends AppCompatActivity {
         }
 
         //check email and password
-        //IMPORTANT: here should be call to backend or safer function for local check; For example simple check is cool
-        //For example simple check is cool
+
         if (isValid) {
             String usernameValue = username.getText().toString();
             String passwordValue = password.getText().toString();
             if (usernameValue.equals("Admin1") && passwordValue.equals("password1")) {
                 //everything checked we open new activity
-                Intent i = new Intent(MainActivity.this, MainCalenderView.class);
-                startActivity(i);
+                Toast t = Toast.makeText(this, "Welcome Back!", Toast.LENGTH_SHORT);
+                t.show();
+                switchToCalenderView();
 
-                //this.finish();
             } else {
                 Toast t = Toast.makeText(this, "Wrong username or password!", Toast.LENGTH_SHORT);
                 t.show();
             }
         }
+
     }
+    private void switchToCalenderView() {
+        Intent i = new Intent(MainActivity.this, MainCalenderView.class);
+        startActivity(i);
+        finish();
+    }
+
 }

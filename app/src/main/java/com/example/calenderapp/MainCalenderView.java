@@ -6,12 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainCalenderView extends AppCompatActivity {
 
-    EditText username;
-    EditText password;
-    Button login;
 
 
     @Override
@@ -19,5 +17,7 @@ public class MainCalenderView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.calender_main_view);
 
-    }
+
+        }
+
 }

@@ -5,4 +5,5 @@
     <string name="enter_password">Enter Password</string>
     <string name="login">LOGIN</string>
     <string name="welcome">Welcome!</string>
+    <string name="welcome2">Welcome!</string>
 </resources>
