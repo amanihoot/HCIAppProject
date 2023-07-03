@@ -6,4 +6,14 @@
     <string name="login">LOGIN</string>
     <string name="welcome">Welcome!</string>
     <string name="welcome2">Welcome!</string>
+    <string name="tue">TUE</string>
+    <string name="june_2023">june 2023</string>
+    <string name="last_month">Last Month</string>
+    <string name="next_month">Next Month</string>
+    <string name="mon">MON</string>
+    <string name="wed">WED</string>
+    <string name="thur">THUR</string>
+    <string name="fri">FRI</string>
+    <string name="sat">SAT</string>
+    <string name="sun">SUN</string>
 </resources>
