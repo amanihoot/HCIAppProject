@@ -25,5 +25,34 @@ public class MainActivity extends AppCompatActivity {
         EditText password = findViewById(R.id.passW);
         Button login = findViewById(R.id.LoginButton);
 
+
+        login.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                determineLogin(username.getText().toString(), password.getText().toString());
+            }
+        });
+
+    }
+
+    private void determineLogin(String one, String two) {
+        String u = one;
+        String p = two;
+
+        String useradmin1 = "Admin1";
+        String useradmin2 = "Admin2";
+        String passadmin1 = "Password1";
+        String passadmin2 = "Password2";
+
+        boolean isCorrect = false;
+
+        if (u.equals(useradmin1) && p.equals(passadmin1)){
+            System.out.print("Working");
+        }
+        else{
+            System.out.print("ERROR");
+        }
+
+       // switchToResultScreen(grade);
     }
 }
