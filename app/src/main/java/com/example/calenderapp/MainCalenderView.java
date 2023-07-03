@@ -4,10 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 //import androidx.constraintlayout.widget.ConstraintLayout;
 //import android.graphics.drawable.AnimationDrawable;
 import android.os.Bundle;
+import android.widget.Button;
+import android.widget.EditText;
 
 public class MainCalenderView extends AppCompatActivity {
 
-
+    EditText username;
+    EditText password;
+    Button login;
 
 
     @Override
