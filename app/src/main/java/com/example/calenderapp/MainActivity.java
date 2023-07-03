@@ -37,14 +37,13 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-    boolean isEmpty(EditText text) {
-        CharSequence str = text.getText().toString();
-        return TextUtils.isEmpty(str);
-    }
+    //public boolean isEmpty() {
+     //   return;
+    //}
 
     void checkDataEntered() {
 
-        if (isEmpty(username) || isEmpty(password)) {
+        if (username.getText().toString().isEmpty() || password.getText().toString().isEmpty()) {
             Toast t = Toast.makeText(this, "Please enter your credentials", Toast.LENGTH_SHORT);
             t.show();
         }
@@ -56,11 +55,11 @@ public class MainActivity extends AppCompatActivity {
     }
     void checkUsername() {
         boolean isValid = true;
-        if (isEmpty(username)) {
+        if (username.getText().toString().isEmpty()) {
             username.setError("You must enter username to login!");
             isValid = false;
         }
-        if (isEmpty(password)) {
+        if (password.getText().toString().isEmpty()) {
             password.setError("You must enter password to login!");
             isValid = false;
         } else {
@@ -80,10 +79,10 @@ public class MainActivity extends AppCompatActivity {
                 //everything checked we open new activity
                 Intent i = new Intent(MainActivity.this, MainCalenderView.class);
                 startActivity(i);
-                //we close this activity
-                this.finish();
+
+                //this.finish();
             } else {
-                Toast t = Toast.makeText(this, "Wrong email or password!", Toast.LENGTH_SHORT);
+                Toast t = Toast.makeText(this, "Wrong username or password!", Toast.LENGTH_SHORT);
                 t.show();
             }
         }
