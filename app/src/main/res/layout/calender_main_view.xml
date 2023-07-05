@@ -8,7 +8,6 @@
     android:background="@drawable/gradient_two"
     tools:context=".MainCalenderView"
     tools:ignore="ExtraText">
-    .
 
     <Button
         android:id="@+id/backButton"
@@ -30,10 +29,28 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <TextView
+        android:id="@+id/TodoText"
+        android:layout_width="117dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="147dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginBottom="28dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/List"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/calendar"
+        tools:ignore="TextSizeCheck" />
+
     <ListView
         android:id="@+id/List"
         android:layout_width="364dp"
-        android:layout_height="251dp"
+        android:layout_height="0dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
@@ -45,7 +62,8 @@
         android:listSelector="@drawable/gradient_two"
         app:layout_constraintBottom_toTopOf="@+id/backButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/TodoText" />
 
     <CalendarView
         android:id="@+id/calendar"
@@ -68,24 +86,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/TodoText"
-        android:layout_width="117dp"
-        android:layout_height="25dp"
-        android:layout_marginStart="147dp"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="147dp"
-        android:layout_marginBottom="28dp"
-        android:background="@drawable/border_text"
-        android:text="@string/to_do"
-        android:textAlignment="center"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/List"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/calendar"
-        tools:ignore="TextSizeCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
