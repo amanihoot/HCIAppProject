@@ -5,7 +5,7 @@ import android.widget.CalendarView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class NewEventView  extends AppCompatActivity {
+public class MainCalenderView  extends AppCompatActivity {
 
     // Define the variable of CalendarView type
     // and TextView type;
@@ -16,7 +16,7 @@ public class NewEventView  extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.add_new_event);
+        setContentView(R.layout.calender_main_view);
 
         // By ID we can use each component
         // which id is assign in xml file
@@ -28,8 +28,7 @@ public class NewEventView  extends AppCompatActivity {
                 findViewById(R.id.date_view);*/
 
         // Add Listener in calendar
-        calendar
-                .setOnDateChangeListener(
+        calendar.setOnDateChangeListener(
                         new CalendarView
                                 .OnDateChangeListener() {
                             @Override
@@ -38,7 +37,7 @@ public class NewEventView  extends AppCompatActivity {
                             // and in this method we will
                             // get the value of DAYS, MONTH, YEARS
                             public void onSelectedDayChange(
-                                    @NonNull CalendarView view,
+                                    CalendarView view,
                                     int year,
                                     int month,
                                     int dayOfMonth)

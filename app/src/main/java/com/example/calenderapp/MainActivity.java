@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             String passwordValue = password.getText().toString();
             if (usernameValue.equals("Admin1") && passwordValue.equals("password1")) {
                 //everything checked we open new activity
-                Intent i = new Intent(MainActivity.this, NewEventView.class);
+                Intent i = new Intent(MainActivity.this, MainCalenderView.class);
                 startActivity(i);
                 finish();
 
