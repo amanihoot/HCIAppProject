@@ -18,4 +18,8 @@
     <string name="sun">SUN</string>
     <string name="new_task">New Task</string>
     <string name="back">Back</string>
+    <string name="to_do">To-Do</string>
+    <string name="log_out">Log Out</string>
+    <string name="extra_activity">EXTRA ACTIVITY WOULD GO HERE</string>
+    <string name="go_back">Go Back</string>
 </resources>
